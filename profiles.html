@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет — Техникум «Бизнес и Право»</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profiles.css">
+    <script src="js/db.js"></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-wrap">
+            <a href="index.html" class="logo-link">
+                <div class="logo-block">
+                    <img src="images/76916f23-07aa-46e8-b57a-c837cc1ad379.webp" alt="Бизнес и Право"
+                        class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-title">БИЗНЕС И ПРАВО</span>
+                        <span class="logo-subtitle">ТЕХНИКУМ</span>
+                    </div>
+                </div>
+            </a>
+            <nav class="nav-menu" style="display: flex; align-items: center;">
+                <a href="index.html" class="nav-link">Главная страница</a>
+                <a href="index.html#catalog" class="nav-link">Все кружки</a>
+
+                <div class="notification-bell-wrapper" id="bellWrapper" style="display:none;">
+                    <button class="bell-btn" id="bellBtn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                    </button>
+                    <span class="bell-badge" id="bellBadge">0</span>
+                </div>
+
+                <button class="btn-logout" id="logoutBtnTop"
+                    style="margin:0; padding: 8px 15px; font-size:0.9rem;">Выйти</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 140px; padding-bottom: 60px;">
+        <div class="profile-wrapper">
+
+            <aside class="profile-card">
+                <div class="profile-avatar-container">
+                    <img id="userAvatar" src="" alt="Аватар" class="profile-big-avatar">
+                </div>
+                <h2 id="userName">Загрузка...</h2>
+                <p id="userGroup"></p>
+                <p id="userRoleBadge"
+                    style="text-align:center; margin-bottom:20px; font-weight:bold; font-size:0.85rem; text-transform:uppercase; color:var(--accent-blue);">
+                </p>
+
+                <form id="avatarForm">
+                    <div class="form-group">
+                        <label>Ссылка на фото профиля (URL)</label>
+                        <input type="url" id="avatarUrlInput" required>
+                    </div>
+                    <button type="submit" class="btn-submit" style="padding: 10px; font-size:0.9rem;">Обновить
+                        фото</button>
+                </form>
+                <button class="btn-logout" id="logoutBtn">Выйти из аккаунта</button>
+            </aside>
+
+            <div class="profile-info-block">
+
+                <div id="studentInterface" style="display:none;">
+                    <h3
+                        style="font-size: 1.6rem; margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
+                        Личные данные</h3>
+                    <form id="bioForm" style="margin-bottom: 40px;">
+                        <div class="form-group">
+                            <label>О себе</label>
+                            <textarea id="bioInput" rows="4" placeholder="Расскажите о своих увлечениях..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit" style="max-width: 200px;">Сохранить изменения</button>
+                    </form>
+
+                    <h3 style="font-size: 1.6rem; margin-bottom: 10px;">Мои кружки и объединения</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">Список ваших
+                        официальных зачислений, утвержденных модератором.</p>
+                    <div class="admin-list-clubs" id="studentClubsContainer" style="margin-bottom: 40px;"></div>
+
+                    <h3 style="font-size: 1.6rem; margin-bottom: 10px;">Моя группа (Одногруппники)</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">Студенты, которые
+                        учатся вместе с вами. Нажмите на карточку, чтобы открыть профиль или написать.</p>
+                    <div class="user-mini-grid" id="classmatesContainer"></div>
+
+                    <h3 style="font-size: 1.6rem; margin-bottom: 10px;">Товарищи по кружкам</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">Ребята, которые
+                        посещают те же объединения, что и вы.</p>
+                    <div class="user-mini-grid" id="clubmatesContainer"></div>
+                </div>
+
+                <div id="adminInterface" style="display:none;">
+                    <h3
+                        style="font-size: 1.6rem; color:#fc8181; margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
+                        Уведомления и новые заявки на кружки
+                    </h3>
+                    <div id="adminNotificationsContainer"
+                        style="margin-bottom: 40px; display:flex; flex-direction:column; gap:15px;"></div>
+
+                    <h3
+                        style="font-size: 1.6rem; margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
+                        Панель управления пользователями
+                    </h3>
+                    <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:20px;">
+                        Здесь вы можете менять ФИО, группы, назначать новых администраторов, удалять учеников из системы
+                        или вручную редактировать кружки.
+                    </p>
+                    <div id="adminUsersManagementList" style="display:flex; flex-direction:column; gap:20px;"></div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="fullscreen-modal" id="userProfileModal">
+        <div class="modal-profile-content">
+            <button class="modal-profile-close" id="closeProfileModalBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div id="modalProfileView">
+                <img src="" alt="" class="modal-profile-avatar" id="mAvatar">
+                <h3 class="modal-profile-name" id="mName">Загрузка...</h3>
+                <div class="modal-profile-group" id="mGroup">Группа</div>
+
+                <div class="modal-profile-section">
+                    <h5>О себе</h5>
+                    <p id="mBio">Информация отсутствует</p>
+                </div>
+
+                <div class="modal-profile-section">
+                    <h5>Посещаемые кружки</h5>
+                    <p id="mClubs">Нет кружков</p>
+                </div>
+
+                <button class="btn-submit" id="startChatBtn"
+                    style="margin-top:25px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Открыть чат
+                </button>
+            </div>
+
+            <div id="modalChatView" style="display: none; text-align: left;">
+                <button id="backToProfileBtn" class="back-link-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Назад к профилю
+                </button>
+                <h3 id="chatTargetName" style="color: white; margin-bottom: 2px;">Чат</h3>
+                <span id="chatTargetGroup" style="color: var(--text-muted); font-size: 0.85rem;"></span>
+
+                <div class="chat-container">
+                    <div class="chat-messages" id="chatMessagesBox"></div>
+                    <form class="chat-form" id="chatSubmitForm">
+                        <input type="text" id="chatInputMessage" class="chat-input" placeholder="Напишите сообщение..."
+                            autocomplete="off" required>
+                        <button type="submit" class="chat-send-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/profiles.js"></script>
+</body>
+
+</html>

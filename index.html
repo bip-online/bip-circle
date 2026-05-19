@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Единый портал кружков — Техникум «Бизнес и Право»</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-wrap">
+            <a href="#about" class="logo-link">
+                <div class="logo-block">
+                    <img src="images/76916f23-07aa-46e8-b57a-c837cc1ad379.webp" alt="Бизнес и Право"
+                        class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-title">БИЗНЕС И ПРАВО</span>
+                        <span class="logo-subtitle">ТЕХНИКУМ</span>
+                    </div>
+                </div>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="#about" class="nav-link">О проекте</a>
+                <a href="#catalog" class="nav-link">Все кружки</a>
+                <a href="#gallery-section" class="nav-link">Галерея</a>
+                <button class="nav-link-btn open-modal-btn">Записаться</button>
+
+                <div id="authBlock">
+                    <button class="nav-login-btn open-auth-btn" id="headerAuthBtn">Войти</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="about">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('images/bip1.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/bip2.jfif');"></div>
+            <div class="hero-slide" style="background-image: url('images/bip3.jpg');"></div>
+        </div>
+
+        <div class="container hero-container">
+            <div class="hero-text-content">
+                <div class="badge">Навигатор по внеучебной деятельности 2026</div>
+                <h1>Найди свой кружок в <br><span class="highlight">«Бизнес и Право»</span></h1>
+                <p>15 направлений для всех специальностей техникума. Прокачивай навыки, создавай крутые проекты и
+                    собирай портфолио для будущей карьеры.</p>
+                <div class="hero-actions">
+                    <a href="#catalog" class="btn-primary">Перейти к каталогу</a>
+                    <button class="btn-secondary open-modal-btn">Быстрая запись</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalog" class="catalog-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Каталог внеучебных объединений</h2>
+                <p>Используй фильтр, чтобы быстро найти кружки под свою специальность</p>
+            </div>
+
+            <div class="filter-wrapper">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all"><span>Все направления</span></button>
+                    <button class="filter-btn" data-filter="it"><span>IT & Кодинг</span></button>
+                    <button class="filter-btn" data-filter="pharm"><span>Фармация</span></button>
+                    <button class="filter-btn" data-filter="buh"><span>Бухучет</span></button>
+                    <button class="filter-btn" data-filter="pd"><span>Правоохранители</span></button>
+                    <button class="filter-btn" data-filter="sport"><span>Спорт</span></button>
+                </div>
+            </div>
+
+            <div class="grid-container" id="clubsGrid">
+                <div class="club-card" data-category="it">
+                    <div class="card-body"><span class="tag tag-it">IT</span>
+                        <h3>C++ Force</h3>
+                        <p>Изучение сложных алгоритмов, оптимизация кода.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Вт, Чт — 16:00</p><button class="card-btn open-modal-btn">Запись</button>
+                    </div>
+                </div>
+                <div class="club-card" data-category="it">
+                    <div class="card-body"><span class="tag tag-it">IT</span>
+                        <h3>JS-Web Studio</h3>
+                        <p>Frontend-разработка: верстка адаптивных сайтов.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Пн, Ср — 15:30</p><button class="card-btn open-modal-btn">Запись</button>
+                    </div>
+                </div>
+                <div class="club-card" data-category="it">
+                    <div class="card-body"><span class="tag tag-it">IT</span>
+                        <h3>SharpDev</h3>
+                        <p>Разработка на C# и платформе .NET.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Пятница — 16:00</p><button class="card-btn open-modal-btn">Запись</button>
+                    </div>
+                </div>
+                <div class="club-card" data-category="it">
+                    <div class="card-body"><span class="tag tag-it">IT</span>
+                        <h3>PyCore</h3>
+                        <p>Анализ данных, автоматизация и Telegram-боты.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Вторник — 15:00</p><button class="card-btn open-modal-btn">Запись</button>
+                    </div>
+                </div>
+                <div class="club-card" data-category="it">
+                    <div class="card-body"><span class="tag tag-it">IT</span>
+                        <h3>SQL-Master</h3>
+                        <p>Проектирование и администрирование баз данных.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Четверг — 16:30</p><button class="card-btn open-modal-btn">Запись</button>
+                    </div>
+                </div>
+                <div class="club-card" data-category="pharm">
+                    <div class="card-body"><span class="tag tag-pharm">Фармация</span>
+                        <h3>Юный провизор</h3>
+                        <p>Изучение лекарственных растений Кубани.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Среда — 14:40</p><button class="card-btn open-modal-btn">Запись</button>
+                    </div>
+                </div>
+                <div class="club-card" data-category="pharm">
+                    <div class="card-body"><span class="tag tag-pharm">Фармация</span>
+                        <h3>Фарм-Бизнес</h3>
+                        <p>Психология аптечных продаж и маркетинг.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Понедельник — 15:00</p><button class="card-btn open-modal-btn">Запись</button>
+                    </div>
+                </div>
+                <div class="club-card" data-category="buh">
+                    <div class="card-body"><span class="tag tag-buh">Бухучет</span>
+                        <h3>1С: Эксперт</h3>
+                        <p>Практическое ведение виртуальной фирмы.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Вт, Чт — 15:30</p><button class="card-btn open-modal-btn">Запись</button>
+                    </div>
+                </div>
+                <div class="club-card" data-category="buh">
+                    <div class="card-body"><span class="tag tag-buh">Бухучет</span>
+                        <h3>Аудит-Контроль</h3>
+                        <p>Судебная бухгалтерия и аудит.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Среда — 16:00</p><button class="card-btn open-modal-btn">Запись</button>
+                    </div>
+                </div>
+                <div class="club-card" data-category="pd">
+                    <div class="card-body"><span class="tag tag-pd">Правоохранители</span>
+                        <h3>Guard</h3>
+                        <p>Тактико-специальная подготовка, самооборона.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Пн, Ср — 17:00</p><button class="card-btn open-modal-btn">Запись</button>
+                    </div>
+                </div>
+                <div class="club-card" data-category="pd">
+                    <div class="card-body"><span class="tag tag-pd">Правоохранители</span>
+                        <h3>След</h3>
+                        <p>Лаборатория криминалистики: снятие отпечатков.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Четверг — 16:00</p><button class="card-btn open-modal-btn">Запись</button>
+                    </div>
+                </div>
+                <div class="club-card" data-category="pd">
+                    <div class="card-body"><span class="tag tag-pd">Правоохранители</span>
+                        <h3>Патриот</h3>
+                        <p>Огневая и начальная военная подготовка.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Суббота — 12:00</p><button class="card-btn open-modal-btn">Запись</button>
+                    </div>
+                </div>
+                <div class="club-card" data-category="sport">
+                    <div class="card-body"><span class="tag tag-sport">Спорт</span>
+                        <h3>Сталь (Кроссфит)</h3>
+                        <p>Высокоинтенсивные тренировки, подготовка к ГТО.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Пн, Ср, Пт — 16:30</p><button class="card-btn open-modal-btn">Запись</button>
+                    </div>
+                </div>
+                <div class="club-card" data-category="sport">
+                    <div class="card-body"><span class="tag tag-sport">Спорт</span>
+                        <h3>Лидер</h3>
+                        <p>Отработка игровой тактики (Волейбол/Баскетбол).</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Вт, Чт — 17:00</p><button class="card-btn open-modal-btn">Запись</button>
+                    </div>
+                </div>
+                <div class="club-card" data-category="sport">
+                    <div class="card-body"><span class="tag tag-sport">Спорт</span>
+                        <h3>Рефлекс</h3>
+                        <p>Настольный теннис и бадминтон.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Каждый день — 15:00</p><button class="card-btn open-modal-btn">Запись</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery-section" class="gallery-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Жизнь в кружках</h2>
+                <p>Нажми на фото, чтобы рассмотреть детально</p>
+            </div>
+            <div class="slider-wrapper">
+                <button class="slider-arrow prev-btn">&#10094;</button>
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <div class="slide-item"><img src="images/bip1.jpg" alt="Студенты IT" class="gallery-img">
+                        </div>
+                        <div class="slide-item"><img src="images/bip2.jfif" alt="Студенты IT" class="gallery-img">
+                        </div>
+                        <div class="slide-item"><img src="images/bip3.jpg" alt="Студенты IT" class="gallery-img">
+                        </div>
+                        <div class="slide-item"><img src="images/bip4.jpg" alt="Студенты IT" class="gallery-img">
+                        </div>
+                        <div class="slide-item"><img src="images/bip5.jpg" alt="Студенты IT" class="gallery-img">
+                        </div>
+                        <div class="slide-item"><img src="images/bip6.jpg" alt="Студенты IT" class="gallery-img">
+                        </div>
+                    </div>
+                    <div class="gallery-previews" id="galleryPreviews"></div>
+                </div>
+                <button class="slider-arrow next-btn">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-window">
+            <button class="modal-close-btn" id="closeModalBtn">&times;</button>
+            <h3>Подать заявку</h3>
+            <p>Заполни поля, и куратор направления свяжется с тобой.</p>
+            <form id="joinForm">
+                <div class="form-group">
+                    <label>ФИО студента</label>
+                    <input type="text" id="name" required placeholder="Сергей Иванов">
+                </div>
+                <div class="form-group">
+                    <label>Учебная группа</label>
+                    <select id="group" required>
+                        <option value="" disabled selected>Выберите вашу группу</option>
+                        <option value="Д1А">Д1А</option>
+                        <option value="Д1Б">Д1Б</option>
+                        <option value="Д2">Д2</option>
+                        <option value="Д3">Д3</option>
+                        <option value="Д4">Д4</option>
+                        <option value="ИП1">ИП1</option>
+                        <option value="ИП2">ИП2</option>
+                        <option value="ИП3">ИП3</option>
+                        <option value="ИП4А">ИП4А</option>
+                        <option value="ИП4Б">ИП4Б</option>
+                        <option value="ИС1А">ИС1А</option>
+                        <option value="ИС1Б">ИС1Б</option>
+                        <option value="ИС2">ИС2</option>
+                        <option value="ИС3">ИС3</option>
+                        <option value="ИС4">ИС4</option>
+                        <option value="Л1">Л1</option>
+                        <option value="Н1А">Н1А</option>
+                        <option value="Н1Б">Н1Б</option>
+                        <option value="Н1В">Н1В</option>
+                        <option value="Н2А">Н2А</option>
+                        <option value="Н2Б">Н2Б</option>
+                        <option value="Н3А">Н3А</option>
+                        <option value="Н3Б">Н3Б</option>
+                        <option value="Н4А">Н4А</option>
+                        <option value="Н4Б">Н4Б</option>
+                        <option value="ОЗФО 1А">ОЗФО 1А</option>
+                        <option value="ОЗФО 1Б">ОЗФО 1Б</option>
+                        <option value="ОЗФО 1В">ОЗФО 1В</option>
+                        <option value="ОЗФО 1Г">ОЗФО 1Г</option>
+                        <option value="ОЗФО 2А">ОЗФО 2А</option>
+                        <option value="ОЗФО 2Б">ОЗФО 2Б</option>
+                        <option value="ОЗФО 2В">ОЗФО 2В</option>
+                        <option value="ОЗФО 2Г">ОЗФО 2Г</option>
+                        <option value="ОЗФО 2Д">ОЗФО 2Д</option>
+                        <option value="ОЗФО 2Е">ОЗФО 2Е</option>
+                        <option value="ОЗФО 2Ж">ОЗФО 2Ж</option>
+                        <option value="ОЗФО 2Л">ОЗФО 2Л</option>
+                        <option value="ОЗФО 3А">ОЗФО 3А</option>
+                        <option value="ОЗФО 3Б">ОЗФО 3Б</option>
+                        <option value="ОЗФО 3В">ОЗФО 3В</option>
+                        <option value="ОЗФО 3Г">ОЗФО 3Г</option>
+                        <option value="ОЗФО 3Д">ОЗФО 3Д</option>
+                        <option value="ОЗФО 3Е">ОЗФО 3Е</option>
+                        <option value="ОЗФО 3Ж">ОЗФО 3Ж</option>
+                        <option value="ОЗФО 33">ОЗФО 33</option>
+                        <option value="ОЗФО 3И">ОЗФО 3И</option>
+                        <option value="ОЗФО 3К">ОЗФО 3К</option>
+                        <option value="ПД1А">ПД1А</option>
+                        <option value="ПД1Б">ПД1Б</option>
+                        <option value="ПД1В">ПД1В</option>
+                        <option value="ПД1Г">ПД1Г</option>
+                        <option value="ПД1Д">ПД1Д</option>
+                        <option value="ПД1Е">ПД1Е</option>
+                        <option value="ПД1Ж">ПД1Ж</option>
+                        <option value="ПД2А">ПД2А</option>
+                        <option value="ПД2Б">ПД2Б</option>
+                        <option value="ПД2В">ПД2В</option>
+                        <option value="ПД2Г">ПД2Г</option>
+                        <option value="ПД2Д">ПД2Д</option>
+                        <option value="ПД2Е">ПД2Е</option>
+                        <option value="ПД2Ж">ПД2Ж</option>
+                        <option value="ПД3А">ПД3А</option>
+                        <option value="ПД3Б">ПД3Б</option>
+                        <option value="ПД3В">ПД3В</option>
+                        <option value="ПД3Г">ПД3Г</option>
+                        <option value="ПД3Д">ПД3Д</option>
+                        <option value="ПД3Е">ПД3Е</option>
+                        <option value="ПД3Ж">ПД3Ж</option>
+                        <option value="Т4">Т4</option>
+                        <option value="Ф1А">Ф1А</option>
+                        <option value="Ф1Б">Ф1Б</option>
+                        <option value="Ф1В">Ф1В</option>
+                        <option value="Ф1Г">Ф1Г</option>
+                        <option value="Ф1Д">Ф1Д</option>
+                        <option value="Ф1Е">Ф1Е</option>
+                        <option value="Ф2А">Ф2А</option>
+                        <option value="Ф2Б">Ф2Б</option>
+                        <option value="Ф2В">Ф2В</option>
+                        <option value="Ф2Г">Ф2Г</option>
+                        <option value="Ф2Д">Ф2Д</option>
+                        <option value="Ф2Е">Ф2Е</option>
+                        <option value="Ф2Ж">Ф2Ж</option>
+                        <option value="Ф3А">Ф3А</option>
+                        <option value="Ф3Б">Ф3Б</option>
+                        <option value="Ф3В">Ф3В</option>
+                        <option value="Ф3Г">Ф3Г</option>
+                        <option value="Ф3Д">Ф3Д</option>
+                        <option value="Ф3Е">Ф3Е</option>
+                        <option value="Э1">Э1</option>
+                        <option value="Э2">Э2</option>
+                        <option value="Э3">Э3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Направление</label>
+                    <select id="club" required>
+                        <option value="">-- Выбери кружок --</option>
+                        <option value="1">C++ Force</option>
+                        <option value="2">JS-Web Studio</option>
+                        <option value="3">SharpDev</option>
+                        <option value="4">PyCore</option>
+                        <option value="5">SQL-Master</option>
+                        <option value="6">Юный провизор</option>
+                        <option value="7">Фарм-Бизнес</option>
+                        <option value="8">1С: Эксперт</option>
+                        <option value="9">Аудит-Контроль</option>
+                        <option value="10">Guard</option>
+                        <option value="11">След</option>
+                        <option value="12">Патриот</option>
+                        <option value="13">Сталь (Кроссфит)</option>
+                        <option value="14">Лидер</option>
+                        <option value="15">Рефлекс</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="authOverlay">
+        <div class="modal-window auth-window">
+            <button class="modal-close-btn" id="closeAuthBtn">&times;</button>
+            <div id="loginSection" class="auth-section active">
+                <h3>Вход в аккаунт</h3>
+                <form id="loginForm">
+                    <div class="form-group"><label>Ваш логин</label><input type="text" id="loginUser" required
+                            placeholder="Введите логин"></div>
+                    <div class="form-group"><label>Пароль</label><input type="password" id="loginPassword" required
+                            placeholder="••••••••"></div>
+                    <button type="submit" class="btn-submit">Войти</button>
+                </form>
+                <div class="auth-switcher">Нет аккаунта? <button type="button" id="toRegisterBtn">Создать
+                        аккаунт</button></div>
+            </div>
+
+            <div id="registerSection" class="auth-section">
+                <h3>Регистрация</h3>
+                <form id="registerForm">
+                    <div class="form-group"><label>Ваше имя и фамилия</label><input type="text" id="regName" required
+                            placeholder="Сергей Иванов"></div>
+                    <div class="form-group"><label>Придумайте логин</label><input type="text" id="regLogin" required
+                            placeholder="Логин"></div>
+                    <div class="form-group">
+                        <label>Учебная группа</label>
+                        <select id="regGroup" required>
+                            <option value="" disabled selected>Выберите вашу группу</option>
+                            <option value="Д1А">Д1А</option>
+                            <option value="Д1Б">Д1Б</option>
+                            <option value="Д2">Д2</option>
+                            <option value="Д3">Д3</option>
+                            <option value="Д4">Д4</option>
+                            <option value="ИП1">ИП1</option>
+                            <option value="ИП2">ИП2</option>
+                            <option value="ИП3">ИП3</option>
+                            <option value="ИП4А">ИП4А</option>
+                            <option value="ИП4Б">ИП4Б</option>
+                            <option value="ИС1А">ИС1А</option>
+                            <option value="ИС1Б">ИС1Б</option>
+                            <option value="ИС2">ИС2</option>
+                            <option value="ИС3">ИС3</option>
+                            <option value="ИС4">ИС4</option>
+                            <option value="Л1">Л1</option>
+                            <option value="Н1А">Н1А</option>
+                            <option value="Н1Б">Н1Б</option>
+                            <option value="Н1В">Н1В</option>
+                            <option value="Н2А">Н2А</option>
+                            <option value="Н2Б">Н2Б</option>
+                            <option value="Н3А">Н3А</option>
+                            <option value="Н3Б">Н3Б</option>
+                            <option value="Н4А">Н4А</option>
+                            <option value="Н4Б">Н4Б</option>
+                            <option value="ОЗФО 1А">ОЗФО 1А</option>
+                            <option value="ОЗФО 1Б">ОЗФО 1Б</option>
+                            <option value="ОЗФО 1В">ОЗФО 1В</option>
+                            <option value="ОЗФО 1Г">ОЗФО 1Г</option>
+                            <option value="ОЗФО 2А">ОЗФО 2А</option>
+                            <option value="ОЗФО 2Б">ОЗФО 2Б</option>
+                            <option value="ОЗФО 2В">ОЗФО 2В</option>
+                            <option value="ОЗФО 2Г">ОЗФО 2Г</option>
+                            <option value="ОЗФО 2Д">ОЗФО 2Д</option>
+                            <option value="ОЗФО 2Е">ОЗФО 2Е</option>
+                            <option value="ОЗФО 2Ж">ОЗФО 2Ж</option>
+                            <option value="ОЗФО 2Л">ОЗФО 2Л</option>
+                            <option value="ОЗФО 3А">ОЗФО 3А</option>
+                            <option value="ОЗФО 3Б">ОЗФО 3Б</option>
+                            <option value="ОЗФО 3В">ОЗФО 3В</option>
+                            <option value="ОЗФО 3Г">ОЗФО 3Г</option>
+                            <option value="ОЗФО 3Д">ОЗФО 3Д</option>
+                            <option value="ОЗФО 3Е">ОЗФО 3Е</option>
+                            <option value="ОЗФО 3Ж">ОЗФО 3Ж</option>
+                            <option value="ОЗФО 33">ОЗФО 33</option>
+                            <option value="ОЗФО 3И">ОЗФО 3И</option>
+                            <option value="ОЗФО 3К">ОЗФО 3К</option>
+                            <option value="ПД1А">ПД1А</option>
+                            <option value="ПД1Б">ПД1Б</option>
+                            <option value="ПД1В">ПД1В</option>
+                            <option value="ПД1Г">ПД1Г</option>
+                            <option value="ПД1Д">ПД1Д</option>
+                            <option value="ПД1Е">ПД1Е</option>
+                            <option value="ПД1Ж">ПД1Ж</option>
+                            <option value="ПД2А">ПД2А</option>
+                            <option value="ПД2Б">ПД2Б</option>
+                            <option value="ПД2В">ПД2В</option>
+                            <option value="ПД2Г">ПД2Г</option>
+                            <option value="ПД2Д">ПД2Д</option>
+                            <option value="ПД2Е">ПД2Е</option>
+                            <option value="ПД2Ж">ПД2Ж</option>
+                            <option value="ПД3А">ПД3А</option>
+                            <option value="ПД3Б">ПД3Б</option>
+                            <option value="ПД3В">ПД3В</option>
+                            <option value="ПД3Г">ПД3Г</option>
+                            <option value="ПД3Д">ПД3Д</option>
+                            <option value="ПД3Е">ПД3Е</option>
+                            <option value="ПД3Ж">ПД3Ж</option>
+                            <option value="Т4">Т4</option>
+                            <option value="Ф1А">Ф1А</option>
+                            <option value="Ф1Б">Ф1Б</option>
+                            <option value="Ф1В">Ф1В</option>
+                            <option value="Ф1Г">Ф1Г</option>
+                            <option value="Ф1Д">Ф1Д</option>
+                            <option value="Ф1Е">Ф1Е</option>
+                            <option value="Ф2А">Ф2А</option>
+                            <option value="Ф2Б">Ф2Б</option>
+                            <option value="Ф2В">Ф2В</option>
+                            <option value="Ф2Г">Ф2Г</option>
+                            <option value="Ф2Д">Ф2Д</option>
+                            <option value="Ф2Е">Ф2Е</option>
+                            <option value="Ф2Ж">Ф2Ж</option>
+                            <option value="Ф3А">Ф3А</option>
+                            <option value="Ф3Б">Ф3Б</option>
+                            <option value="Ф3В">Ф3В</option>
+                            <option value="Ф3Г">Ф3Г</option>
+                            <option value="Ф3Д">Ф3Д</option>
+                            <option value="Ф3Е">Ф3Е</option>
+                            <option value="Э1">Э1</option>
+                            <option value="Э2">Э2</option>
+                            <option value="Э3">Э3</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label>Придумайте пароль</label><input type="password" id="regPassword"
+                            required placeholder="••••••••"></div>
+                    <button type="submit" class="btn-submit">Зарегистрироваться</button>
+                </form>
+                <div class="auth-switcher">Уже есть аккаунт? <button type="button" id="toLoginBtn">Войти в
+                        систему</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="notificationModal">
+        <div class="modal-window text-center">
+            <button class="modal-close-btn" id="closeNotificationBtn">&times;</button>
+            <div id="notificationIcon" style="font-size: 3rem; margin-bottom: 15px; color: var(--accent-blue);">✓</div>
+            <h3 id="notificationTitle" style="margin-bottom: 10px;">Успешно!</h3>
+            <p id="notificationMessage" style="color: var(--text-muted); margin-bottom: 25px;"></p>
+            <button class="btn-submit" id="okNotificationBtn"
+                style="max-width: 150px; margin: 0 auto; display: block;">OK</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img class="lightbox-content" id="lightboxImg" src="" alt="">
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>ЧУПОО ТЕХНИКУМ «БИЗНЕС И ПРАВО» &copy; 2026 | г. Белореченск, ул. Чапаева, д.48</p>
+        </div>
+    </footer>
+
+    <script src="js/db.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
